@@ -1,7 +1,7 @@
   
 var cartCount = sessionStorage.getItem("cartCount");
 const cartElement = document.getElementById("cart-counter");
-const cartArr = JSON.parse(sessionStorage.getItem('cartArr'));
+const cartArr = JSON.parse(sessionStorage.getItem('cartArr')) || [];
 
   if(cartCount >0){
     cartElement.innerHTML=cartCount;
