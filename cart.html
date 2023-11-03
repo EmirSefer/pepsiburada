@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepet</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
+  </head>
+
+  <header class="topnavbar">
+    <div class="logo">
+      <a class="link" href="index.html">pepsiburada</a>
+      <a
+        href="#"
+        style="color: #ff5e00; text-decoration: none; margin-left: 80px"
+        >Premium'u
+        <p style="display: inline-block">keşfet</p></a
+      >
+    </div>
+
+    <div class="search-bar">
+      <img
+        style="width: 35px; height: auto; opacity: 0.25; margin-left: 5px"
+        src="images/icons8-search-50.png"
+        alt="X"
+      />
+      <textarea
+        name="search-input"
+        id="search-input"
+        cols="255"
+        rows="10"
+        placeholder="Ürün, kategori veya marka ara"
+        class="search-input"
+      ></textarea>
+
+      <button class="search-button">ARA</button>
+    </div>
+
+    <div class="login-container">
+      <div class="login-item">
+        <img src="images/login-user.svg" alt="user" />
+      </div>
+      <div class="login-item" style="display: block; position: relative">
+        <p style="font-size: 15px; font-weight: 700">Giriş Yap</p>
+        <p style="font-size: 10px; margin-top: -15px">veya üye ol</p>
+      </div>
+    </div>
+
+    <div class="cart" onclick="window.location='cart.html'">
+      <div class="cart-img">
+        <img style="width: 60%" src="images/cart.svg" alt="Cart" />
+        <p class="cart-img-counter" id="cart-counter"></p>
+      </div>
+
+      <div class="cart-text">
+        <p>Sepetim</p>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="cart-container"></div>
+    <p>Total Price: <span id="total-price"></span> TL</p>
+    <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+  </body>
+  <script src="scripts/myscript.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script></script>
+</html>
