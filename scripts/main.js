@@ -32,7 +32,6 @@ const cartArr = JSON.parse(sessionStorage.getItem('cartArr')) || [];
     }
     cartArr.push(productInfo);
     sessionStorage.setItem('cartArr', JSON.stringify(cartArr));
-    console.log(cartArr);
     sessionStorage.setItem("cartCount",cartCount);
     sessionStorage.setItem("totalPrice",totalPrice);
     
@@ -51,7 +50,6 @@ const cartArr = JSON.parse(sessionStorage.getItem('cartArr')) || [];
     var btn=targetDiv.getElementsByClassName("item-buy-button")[0];
     btn.style.opacity="0";
     btn.style.transition="0.2s";
-    //console.log("Button is hidden");
       }
     
 
