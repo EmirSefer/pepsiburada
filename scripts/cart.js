@@ -3,7 +3,7 @@ let cartCounter=document.getElementById("cart-counter").innerHTML =
 
 document.getElementById("total-price").innerHTML =
     sessionStorage.getItem("totalPrice")|| 0;
-console.log("before the stated line");
+
 const cartArrTemp= JSON.parse(sessionStorage.getItem('cartArr'))||[];
 let cartHTML='';
 if (cartCounter==0){
