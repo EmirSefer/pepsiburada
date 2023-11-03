@@ -30,8 +30,8 @@ const cartArr = JSON.parse(sessionStorage.getItem('cartArr'));
       priceInKurus: grandParent.querySelector('.item-info-price').innerHTML,
       priceType: grandParent.querySelector('.item-info-unit').innerHTML
     }
-    //cartArr.push(productInfo);
-    //sessionStorage.setItem('cartArr', JSON.stringify(cartArr));
+    cartArr.push(productInfo);
+    sessionStorage.setItem('cartArr', JSON.stringify(cartArr));
     console.log(cartArr);
     sessionStorage.setItem("cartCount",cartCount);
     sessionStorage.setItem("totalPrice",totalPrice);
