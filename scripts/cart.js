@@ -6,7 +6,8 @@ document.getElementById("total-price").innerHTML =
 
 let cartHTML='';
 const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
-cartArrNEW.forEach((element,index) => {
+if (!cartArrNEW){
+      cartArrNEW.forEach((element,index) => {
       cartHTML+=`
       <div class="cart-item">
         <div class="cart-item-img">
@@ -24,6 +25,11 @@ cartArrNEW.forEach((element,index) => {
       </div>
       `
 });
+}
+else{
+      cartHTML=`Sepetinizde hiçbir ürün yok.`;
+}
+
 
 function removeItem(index){
       let tempPrice=+document.getElementById("total-price").innerHTML;
