@@ -3,15 +3,15 @@ let cartCounter=document.getElementById("cart-counter").innerHTML =
 
 document.getElementById("total-price").innerHTML =
     sessionStorage.getItem("totalPrice")|| 0;
-
-const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'))||[];
+console.log("before the stated line");
+const cartArrTemp= JSON.parse(sessionStorage.getItem('cartArr'))||[];
 let cartHTML='';
 if (cartCounter==0){
       cartHTML+=`<p>Sepetinizde hiçbir ürün yok.</p>`;
 }
 else{
       
-      cartArrNEW.forEach((element,index) => {
+      cartArrTemp.forEach((element,index) => {
       cartHTML+=`
       <div class="cart-item">
         <div class="cart-item-img">
@@ -35,13 +35,13 @@ else{
 function removeItem(index){
       let tempPrice=+document.getElementById("total-price").innerHTML;
       let tempCount= +document.getElementById("cart-counter").innerHTML;
-      let newPrice= tempPrice-(cartArrNEW[index].priceInKurus);
+      let newPrice= tempPrice-(cartArrTemp[index].priceInKurus);
       let newCount=tempCount-1;
 
       sessionStorage.setItem('cartCount',newCount);
       sessionStorage.setItem('totalPrice',newPrice);
-      cartArrNEW.splice(index,1);
-      sessionStorage.setItem('cartArr',JSON.stringify(cartArrNEW));
+      cartArrTemp.splice(index,1);
+      sessionStorage.setItem('cartArr',JSON.stringify(cartArrTemp));
       location.reload();      
 }
 document.querySelector('.cart-container').innerHTML=cartHTML;
