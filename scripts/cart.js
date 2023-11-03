@@ -1,11 +1,15 @@
 let cartCounter=document.getElementById("cart-counter").innerHTML =
-      sessionStorage.getItem("cartCount");
+      sessionStorage.getItem("cartCount") || 0;
 
 document.getElementById("total-price").innerHTML =
     sessionStorage.getItem("totalPrice");
 
 let cartHTML='';
-const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
+if (cartCounter==0){
+      cartHTML+=`<p>Sepetinizde hiçbir ürün yok.</p>`;
+}
+else{
+      const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
       cartArrNEW.forEach((element,index) => {
       cartHTML+=`
       <div class="cart-item">
@@ -24,9 +28,6 @@ const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
       </div>
       `
 });
-
-if (cartCounter==0){
-      cartHTML+=`<p>Sepetinizde hiçbir ürün yok.</p>`;
 }
 
 
