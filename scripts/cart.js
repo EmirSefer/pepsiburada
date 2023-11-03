@@ -26,7 +26,7 @@ const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
 });
 
 if (cartCounter==0){
-      cartHTML+=`<h1>Sepetinizde hiçbir ürün yok.</h1>`;
+      cartHTML+=`<p>Sepetinizde hiçbir ürün yok.</p>`;
 }
 
 
