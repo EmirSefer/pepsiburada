@@ -2,9 +2,6 @@
 var cartCount = sessionStorage.getItem("cartCount");
 const cartElement = document.getElementById("cart-counter");
 const cartArr = JSON.parse(sessionStorage.getItem('cartArr'));
-function test(){
-  console.log(cartArr);
-}
 
   if(cartCount >0){
     cartElement.innerHTML=cartCount;
@@ -33,8 +30,9 @@ function test(){
       priceInKurus: grandParent.querySelector('.item-info-price').innerHTML,
       priceType: grandParent.querySelector('.item-info-unit').innerHTML
     }
-    cartArr.push(productInfo);
-    sessionStorage.setItem('cartArr', JSON.stringify(cartArr));
+    //cartArr.push(productInfo);
+    //sessionStorage.setItem('cartArr', JSON.stringify(cartArr));
+    console.log(cartArr);
     sessionStorage.setItem("cartCount",cartCount);
     sessionStorage.setItem("totalPrice",totalPrice);
     
