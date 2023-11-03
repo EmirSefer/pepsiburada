@@ -1,11 +1,11 @@
 document.getElementById("cart-counter").innerHTML =
-      localStorage.getItem("cartCount");
+      sessionStorage.getItem("cartCount");
 
 document.getElementById("total-price").innerHTML =
-    localStorage.getItem("totalPrice");
+    sessionStorage.getItem("totalPrice");
 
 let cartHTML='';
-const cartArrNEW= JSON.parse(localStorage.getItem('cartArr'));
+const cartArrNEW= JSON.parse(sessionStorage.getItem('cartArr'));
 cartArrNEW.forEach((element,index) => {
       cartHTML+=`
       <div class="cart-item">
@@ -31,10 +31,10 @@ function removeItem(index){
       let newPrice= tempPrice-(cartArrNEW[index].priceInKurus);
       let newCount=tempCount-1;
 
-      localStorage.setItem('cartCount',newCount);
-      localStorage.setItem('totalPrice',newPrice);
+      sessionStorage.setItem('cartCount',newCount);
+      sessionStorage.setItem('totalPrice',newPrice);
       cartArrNEW.splice(index,1);
-      localStorage.setItem('cartArr',JSON.stringify(cartArrNEW));
+      sessionStorage.setItem('cartArr',JSON.stringify(cartArrNEW));
       location.reload();      
 }
 document.querySelector('.cart-container').innerHTML=cartHTML;
