@@ -1,6 +1,7 @@
   
 var cartCount = localStorage.getItem("cartCount");
 const cartElement = document.getElementById("cart-counter");
+localStorage.setItem('cartArr',[]);
 const cartArr = JSON.parse(localStorage.getItem('cartArr'));
 
   if(cartCount >0){
