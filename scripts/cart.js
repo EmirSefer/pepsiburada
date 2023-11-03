@@ -27,7 +27,7 @@ if (cartArrNEW!==null){
 });
 }
 else{
-      cartHTML=`<h1>Sepetinizde hiçbir ürün yok.</h1>`;
+      cartHTML+=`<h1>Sepetinizde hiçbir ürün yok.</h1>`;
 }
 
 
