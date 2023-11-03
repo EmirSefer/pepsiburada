@@ -2,7 +2,7 @@ let cartCounter=document.getElementById("cart-counter").innerHTML =
       sessionStorage.getItem("cartCount") || 0;
 
 document.getElementById("total-price").innerHTML =
-    sessionStorage.getItem("totalPrice");
+    sessionStorage.getItem("totalPrice")|| 0;
 
 let cartHTML='';
 if (cartCounter==0){
